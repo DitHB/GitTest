@@ -7,7 +7,7 @@
     <div id="login">
         <h2 class="form-signin-heading">Please sign in</h2>
 
-        <asp:TextBox ID="Textbox_Email" CssClass="form-control" runat="server" placeholder="Email address" autofocus> </asp:TextBox>
+        <asp:TextBox ID="TextBox_Email" CssClass="form-control" runat="server" placeholder="Email address" autofocus> </asp:TextBox>
          <asp:TextBox ID="TextBox_Password" CssClass="form-control" runat="server" placeholder="Password"> </asp:TextBox>
 
         <label class="checkbox">
@@ -15,5 +15,9 @@
         </label>
          <asp:LinkButton CssClass="btn btn-lg btn-primary btn-block" runat="server" Text="Sign in" OnClick="LinkButton_Login_Click"> </asp:LinkButton>
     </div>
+
+    <asp:Label ID="Label_Besked" runat="server"> </asp:Label>
+
+
 </asp:Content>
 
