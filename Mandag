@@ -1,0 +1,62 @@
+BootStrap (bruges til prototype og man har en designer over senere)
+- (CSS) (getting started)Basic template
+- (CSS) examples = 
+- (SETUP IN VB) - Tools -> Library package manager -> Manage Nuget Packages for solution - > Bootstrap(Install) - >  Commit
+
+-components (f.eks. menu) - brug div#class container rundt om CPH1/content
+
+
+
+
+- (insert) viewport, bootstrap css fra content- html compability - JQuery og bootstrap
+
+Mandag
+
+masterpage
+stylesheet
+database
+repeater
+login
+session
+form validering
+
+
+0. Opret mappe med Git
+
+1.Masterpage
+
+2.Brugere.aspx
+
+3.Bootstrap <div class="container">
+
+4. DB - opret tabel
+ #Bruger database:
+ ID
+ Navn
+ Email
+ Telefon
+ Password
+
+5.Dataudtræk
+
+6. Login
+
+7. Session (beskyt brugersiden)
+
+
+
+
+
+Tirsdag
+
+BilledeUpload
+Imageresize
+Fuld CB-CRUD på user-modellenn
+ . hvad med VS FORM controls
+
+
+Onsdag
+
+Programmeringsøvelser
+
+
