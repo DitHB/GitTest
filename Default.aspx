@@ -7,8 +7,8 @@
     <div id="login">
         <h2 class="form-signin-heading">Please sign in</h2>
 
-        <asp:TextBox ID="TextBox_Email" CssClass="form-control" runat="server" placeholder="Email address" autofocus> </asp:TextBox>
-         <asp:TextBox ID="TextBox_Password" CssClass="form-control" runat="server" placeholder="Password"> </asp:TextBox>
+        <asp:TextBox ID="TextBox_Email" CssClass="form-control" runat="server" placeholder="Email address" autofocus TextMode="Email"> </asp:TextBox>
+         <asp:TextBox ID="TextBox_Password" CssClass="form-control" runat="server" placeholder="Password" TextMode="Password"> </asp:TextBox>
 
         <label class="checkbox">
             <asp:CheckBox runat="server" /> Remember me
