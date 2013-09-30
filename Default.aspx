@@ -12,7 +12,8 @@
         <label class="checkbox">
           <input type="checkbox" value="remember-me"> Remember me
         </label>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+         <asp:LinkButton CssClass="btn btn-lg btn-primary btn-block" runat="server" Text="Sign in" OnClick="Unnamed1_Click"> </asp:LinkButton>
+       <%-- <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>--%>
       </form>
     </div>
 </asp:Content>
