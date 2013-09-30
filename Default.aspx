@@ -5,16 +5,15 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div id="login">
-      <form class="form-signin">
         <h2 class="form-signin-heading">Please sign in</h2>
-        <input type="text" class="form-control" placeholder="Email address" autofocus>
-        <input type="password" class="form-control" placeholder="Password">
+
+        <asp:TextBox ID="Textbox_Email" CssClass="form-control" runat="server" placeholder="Email address" autofocus> </asp:TextBox>
+         <asp:TextBox ID="TextBox_Password" CssClass="form-control" runat="server" placeholder="Password"> </asp:TextBox>
+
         <label class="checkbox">
-          <input type="checkbox" value="remember-me"> Remember me
+            <asp:CheckBox runat="server" /> Remember me
         </label>
-         <asp:LinkButton CssClass="btn btn-lg btn-primary btn-block" runat="server" Text="Sign in" OnClick="Unnamed1_Click"> </asp:LinkButton>
-       <%-- <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>--%>
-      </form>
+         <asp:LinkButton CssClass="btn btn-lg btn-primary btn-block" runat="server" Text="Sign in" OnClick="LinkButton_Login_Click"> </asp:LinkButton>
     </div>
 </asp:Content>
 
