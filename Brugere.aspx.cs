@@ -11,11 +11,13 @@ public partial class Brugere : System.Web.UI.Page
     {
         if (Session["Bruger_id"] == null)
         {
-            Response.Redirect("../Login.aspx");
+            Response.Redirect("Default.aspx");
         }
     }
 
-
-
-
+    protected void LinkButton_LogUd_Click(object sender, EventArgs e)
+    {
+        Session["Bruger_id"] = null;
+        Response.Redirect("Default.aspx");
+    }
 }
