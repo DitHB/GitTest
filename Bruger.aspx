@@ -44,14 +44,14 @@
         <tbody>
             <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSourceBrugerByID">
                 <ItemTemplate>
-                <tr>
+                
                     <td>
-                    <a href="Brugere.aspx" class="btn btn-primary">Tilbage til Brugere</a>
+                        <a href="Brugere.aspx" class="btn btn-primary">Tilbage til Brugere</a>
                     </td>
                     <td>
-                    <img src="" width="200" height="200" />
+                        <img src="" width="200" height="200" />
                     </td>
-                </tr>
+             
                  <tr>
                     <td>
                        <p> <%# Eval("Id") %>  </p>                
