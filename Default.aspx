@@ -1,11 +1,18 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
-
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-<%--    <link href="Content/bootstrap/signin.css" rel="stylesheet" />--%>
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="Default" %>
 
 
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     <link href="Content/bootstrap/bootstrap.css" rel="stylesheet" />
+    </head>
+    <body>
+
+<form id="form1" runat="server">
+    <div class="container">
     <div class="row">
         <div class="col-sm-4 col-sm-offset-4 col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4">
             <%-- Div-boks med fejlmeddelelse. Ikke synlig --%>
@@ -33,9 +40,17 @@
             </div>
         </div>
     </div>
-<%--    <asp:Label ID="Label_Besked" runat="server"> </asp:Label>
---%>
+   </div>
 
 
-</asp:Content>
+        
+      
+    </form>
 
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="Scripts/jquery-1.9.1.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="Scripts/bootstrap.js"></script>
+</body>
+</html>
