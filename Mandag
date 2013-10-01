@@ -110,3 +110,13 @@ redigerbruger.aspx indlæser data fra en eksisterende bruger og når man trykker
 
 slet.aspx sletter en bruger(viser ikke noget, men sletter bare) ER DU SIKKER? knap
 
+
+
+TIRSDAG
+--------------------------------------------------
+Rediger bruger (med msgbox)
+Slet bruger (med msgbox)
+opret bruger (med msgbox)
+- vis bruger (detaljer for bruger) 
+	stort img, navn(primary farve blå)
+

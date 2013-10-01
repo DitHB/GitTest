@@ -43,10 +43,10 @@
     <asp:Repeater ID="Repeater_brugere" runat="server">
                     <ItemTemplate>
                         <tr>
-                            <td>
-                                <a href="Bruger.aspx?ID=<%# Eval("Id") %>">Vis</a>
-                                <a href="Rediger.aspx?ID=<%# Eval("Id") %>">Ret</a>
-                                <a href="Opret.aspx?ID=<%# Eval("Id") %>">Opret</a>
+                            <td>    
+                                <a class="btn btn-success btn-xs" href="Bruger.aspx?ID=<%# Eval("Id") %>">Vis Detaljer</a>
+                                <a class="btn btn-warning btn-xs" href="Rediger.aspx?ID=<%# Eval("Id") %>">Ret</a>
+                                <a class="btn btn-danger btn-xs" href="Opret.aspx?ID=<%# Eval("Id") %>">Opret</a>
                             </td>
                             <td>
                                 <%# Eval("Id") %>               
