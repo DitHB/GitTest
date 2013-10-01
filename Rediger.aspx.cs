@@ -48,4 +48,12 @@ public partial class Rediger : System.Web.UI.Page
         conn.Close();
 
     }
+    protected void Button_Save_Click(object sender, EventArgs e)
+    {
+
+    }
+    protected void Button_Delete_Click(object sender, EventArgs e)
+    {
+
+    }
 }
