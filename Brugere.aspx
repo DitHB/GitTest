@@ -4,10 +4,6 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-
-
-
-
      <%--Current site--%>
 
       <h1>Brugere</h1>
@@ -32,54 +28,46 @@
     <table border="1" class="table table-striped">
         <thead>
             <tr>
+                 <th>
+                     REDIGER
+                 </th>
                 <th>#</th>
                 <th>Navn</th>
                 <th>Email</th>
                 <th>Telefon</th>
                 <th>Password</th>
+               
             </tr>
         </thead>
         <tbody>
     <asp:Repeater ID="Repeater_brugere" runat="server">
-                    <ItemTemplate>       
-                            <tr>
-                                 <%--<td>
-                      
-                                        <a href="Bruger.aspx">Vis</a>
-                                        <a href="Rediger.aspx">Ret</a>
-                                        <a href="Opret.aspx">Opret</a>
-                                </td>--%>
-                                <td>
-                                    <%# Eval("Id") %>               <div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-    Action <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
-                                </td>
-                               
-                                <td>
-                                    <p><%# Eval("Navn") %></p>
-                                </td>
-                           
-                                <td>
-                                    <p><%# Eval("Email") %></p>
-                                </td>
-                           
-                                <td>
-                                    <p><%# Eval("Telefon") %></p>
-                                </td>
-                            
-                                <td>
-                                    <p><%# Eval("Password") %></p>
-                                </td>
-                            </tr>
+                    <ItemTemplate>
+                        <tr>
+                            <td>
+                                <a href="Bruger.aspx">Vis</a>
+                                <a href="Rediger.aspx">Ret</a>
+                                <a href="Opret.aspx">Opret</a>
+                            </td>
+                            <td>
+                                <%# Eval("Id") %>               
+                                   
+                            </td>
+                            <td>
+                                <p><%# Eval("Navn") %></p>
+                            </td>
+
+                            <td>
+                                <p><%# Eval("Email") %></p>
+                            </td>
+
+                            <td>
+                                <p><%# Eval("Telefon") %></p>
+                            </td>
+
+                            <td>
+                                <p><%# Eval("Password") %></p>
+                            </td>
+                        </tr>
                     </ItemTemplate>
                 </asp:Repeater>
             </tbody>
