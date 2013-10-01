@@ -62,7 +62,6 @@
 
 
 
-
     <!--************************************MENU**************************************-->
     <nav class="navbar navbar-default" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
@@ -97,46 +96,67 @@
     <!--MENU CLOSE-->
 
 
+
+     <%--Current site--%>
+
+      <h1>Brugere</h1>
+    <%-- Panel med heading --%>
+    <div class="row">
+        <div class="col-lg-6 col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h1 class="panel-title">CodeBehind</h1>
+                </div>
+                <div class="panel-body">
+                    Hentet fra databasen ved hjælp af SQL kald i CodeBehind og DataBind til en Repeater
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
    <!--************************************DATAUDTRÆK**************************************-->
-    
+
+    <table border="1" class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Navn</th>
+                <th>Email</th>
+                <th>Telefon</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody>
     <asp:Repeater ID="Repeater_brugere" runat="server">
-                    <ItemTemplate>
-                        <table border="1" class="tb_view">
-                     <%--       <tr>
-                                <td>
-                                    <a href="Admin_Nyheder.aspx?Id=<%# Eval("Id") %>">Edit</a>
-                                </td>
-                            </tr>--%>
+                    <ItemTemplate>       
                             <tr>
-                                <td><b>ID:</b>
+                                <td>
                                     <p><%# Eval("Id") %></p>
                                 </td>
-                            </tr>
-                            <tr>
+                          
 
-                                <td><b>Navn:</b>
+                                <td>
                                     <p><%# Eval("Navn") %></p>
                                 </td>
-                            </tr>
-                            <tr>
-                                <td><b>Email:</b>
+                           
+                                <td>
                                     <p><%# Eval("Email") %></p>
                                 </td>
-                            </tr>
-                            <tr>
-                                <td><b>Telefon:</b>
+                           
+                                <td>
                                     <p><%# Eval("Telefon") %></p>
                                 </td>
-                            </tr>
-                            <tr>
-                                <td><b>Password:</b>
+                            
+                                <td>
                                     <p><%# Eval("Password") %></p>
                                 </td>
                             </tr>
-                          
-                        </table>
                     </ItemTemplate>
                 </asp:Repeater>
+            </tbody>
+        </table>
     <!--Dataudtræk CLOSE-->
 
 

@@ -28,7 +28,7 @@ public partial class _Default : System.Web.UI.Page
     }
 
 
-    protected void LinkButton_Login_Click(object sender, EventArgs e)
+    protected void Button_Login_Click(object sender, EventArgs e)
     {
         // opret forbindelsen til databasen
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ToString());
@@ -61,7 +61,7 @@ public partial class _Default : System.Web.UI.Page
         }
         else // hvis brugeren ikke findes i databasen
         {
-                Label_Besked.Text = "<div class='span8'><div class='alert alert-error'>Kombinationen af din email og password findes ikke i databasen</div></div>";
+            Panel_Fejlbesked.Visible = true;
         }
         // luk forbindelsen til databasen
         conn.Close();

@@ -28,7 +28,7 @@ public partial class Brugere : System.Web.UI.Page
         cmd.Connection = conn;
 
         // SQL strengen
-        cmd.CommandText = "SELECT * FROM brugere ORDER BY id DESC";
+        cmd.CommandText = "SELECT * FROM brugere ORDER BY id ASC";
 
         // Åben for forbindelsen til databasen
         conn.Open();

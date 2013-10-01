@@ -91,3 +91,22 @@ CMD
 git add
 git commit -m 'besked'
 
+
+
+
+
+DATABASE OPBYGNING
+--------------------------------------------
+5 aspx sider
+
+brugere.aspx tabel over alle brugere(vis slet rediger)
+
+bruger.aspx?id=   viser oplysningerne om en enkelt bruger
+
+nybruger.aspx indeholder fomular til at oprette ny bruger 
+redirect til bruger.aspx og rediger knap
+
+redigerbruger.aspx indlæser data fra en eksisterende bruger og når man trykker gem bliver de opdateret
+
+slet.aspx sletter en bruger(viser ikke noget, men sletter bare) ER DU SIKKER? knap
+
