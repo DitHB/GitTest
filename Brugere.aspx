@@ -44,7 +44,7 @@
                     <ItemTemplate>
                         <tr>
                             <td>
-                                <a href="Bruger.aspx">Vis</a>
+                                <a href="Bruger.aspx?ID=<%# Eval("Id") %>">Vis</a>
                                 <a href="Rediger.aspx">Ret</a>
                                 <a href="Opret.aspx">Opret</a>
                             </td>
