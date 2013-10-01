@@ -10,7 +10,7 @@
     <div class="col-sm-4 col-sm-offset-4 col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4">
 
         <%-- Div-boks med fejlmeddelelse. Ikke synlig --%>
-        <asp:Panel ID="Panel1" runat="server" CssClass="alert alert-danger alert-dismissable" Visible="False">
+        <asp:Panel ID="Panel_Fejlbesked" runat="server" CssClass="alert alert-danger alert-dismissable" Visible="False">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
             <strong>Forkert</strong> Brugernavn aller password
         </asp:Panel>
