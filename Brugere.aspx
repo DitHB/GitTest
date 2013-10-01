@@ -45,8 +45,8 @@
                         <tr>
                             <td>
                                 <a href="Bruger.aspx?ID=<%# Eval("Id") %>">Vis</a>
-                                <a href="Rediger.aspx">Ret</a>
-                                <a href="Opret.aspx">Opret</a>
+                                <a href="Rediger.aspx?ID=<%# Eval("Id") %>">Ret</a>
+                                <a href="Opret.aspx?ID=<%# Eval("Id") %>">Opret</a>
                             </td>
                             <td>
                                 <%# Eval("Id") %>               
