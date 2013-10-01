@@ -102,11 +102,11 @@
     <asp:Repeater ID="Repeater_brugere" runat="server">
                     <ItemTemplate>
                         <table border="1" class="tb_view">
-                            <tr>
+                     <%--       <tr>
                                 <td>
                                     <a href="Admin_Nyheder.aspx?Id=<%# Eval("Id") %>">Edit</a>
                                 </td>
-                            </tr>
+                            </tr>--%>
                             <tr>
                                 <td><b>ID:</b>
                                     <p><%# Eval("Id") %></p>

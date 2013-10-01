@@ -15,6 +15,15 @@ public partial class _Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (Session["Email"] == null)
+        {
+
+        }
+        else
+        {
+            CheckBox_Remember.Checked = true;
+            TextBox_Email.Text = Session["Email"].ToString();
+        }
 
     }
 
@@ -42,6 +51,10 @@ public partial class _Default : System.Web.UI.Page
         SqlDataReader reader = cmd.ExecuteReader();
         if (reader.Read())
         {
+            if (CheckBox_Remember.Checked)
+            {
+                Session["Email"] = reader["Email"];
+            }
             Session["Bruger_id"] = reader["Id"];
             Session["Navn"] = reader["Navn"];
             Response.Redirect("Brugere.aspx");
