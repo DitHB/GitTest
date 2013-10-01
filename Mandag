@@ -86,3 +86,8 @@ Remember funktion  (hvordan husker den det i lang tid?)
 
 
 
+CMD
+--------------------------------------------
+git add
+git commit -m 'besked'
+
