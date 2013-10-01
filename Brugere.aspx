@@ -85,11 +85,5 @@
             </tbody>
         </table>
     <!--Dataudtræk CLOSE-->
-
-
-    <!--************************************LOGIND**************************************-->
-    <asp:LinkButton CssClass="btn btn-lg btn-primary btn-block" runat="server" text="LOG UD" OnClick="LinkButton_LogUd_Click"> </asp:LinkButton>
-    <!--Logind CLOSE-->
-
 </asp:Content>
 
