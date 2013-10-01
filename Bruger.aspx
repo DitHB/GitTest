@@ -14,7 +14,7 @@
                     <h1 class="panel-title">SQL Datasource</h1>
                 </div>
                 <div class="panel-body">
-                    Hentet fra databasen ved hjælp af SQLDataSource med selectparametersm, til at kunne requeste en querystring til en repeater.
+                    Hentet fra databasen ved hjælp af SQLDataSource med selectparametrer til at kunne requeste en querystring til en repeater.
                 </div>
             </div>
         </div>

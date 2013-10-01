@@ -4,6 +4,23 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
+             <%--Current site--%>
+
+      <h1>Rediger</h1>
+    <%-- Panel med heading --%>
+    <div class="row">
+        <div class="col-lg-6 col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h1 class="panel-title">SQL Datasource</h1>
+                </div>
+                <div class="panel-body">
+                    Hentet fra databasen ved hjælp af SQLDataSource med selectparametersm, til at kunne requeste en querystring til en repeater.
+                </div>
+            </div>
+        </div>
+    </div>
+
    <!--************************************DATAUDTRÆK**************************************-->
 
     <table border="1" class="table table-striped">
@@ -18,6 +35,7 @@
         </thead>
         <tbody>
                 <a href="Brugere.aspx" class="info-back">Tilbage til Brugere</a>
+
                     <tr>
                         <td>
                             <asp:Label ID="Label_ID" runat="server"></asp:Label>
