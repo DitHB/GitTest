@@ -20,8 +20,6 @@ public partial class Brugere : System.Web.UI.Page
         {
             Response.Redirect("Default.aspx");
         }
-
-
         // opret forbindelse til databasen
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ToString());
         SqlCommand cmd = new SqlCommand();
