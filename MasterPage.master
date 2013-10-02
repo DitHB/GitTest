@@ -35,17 +35,19 @@
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
       <li class="active"><a href="Brugere.aspx">Brugere</a></li>
+      <li class=""><a href="Opret.aspx">Opret</a></li>
     </ul>
        
     <ul class="nav navbar-nav navbar-right">
          <ul class="nav navbar-nav">
-            <li><a href="Brugere.aspx">Log ud</a></li>
+           <%-- <li><a href="Brugere.aspx">Log ud</a></li>--%>
+             <li> <asp:LinkButton ID="LinkButton1" CssClass="btn btn-lg" runat="server" text="Log ud" OnClick="LinkButton_LogUd_Click"> </asp:LinkButton></li>
         </ul>
     </ul>
   </div><!-- /.navbar-collapse -->
 </nav>
         <!--************************************LOGIND**************************************-->
-        <asp:LinkButton ID="LinkButton1" CssClass="btn btn-lg btn-primary" runat="server" text="LOG UD" OnClick="LinkButton_LogUd_Click"> </asp:LinkButton>
+       
         <!--Logind CLOSE-->
     <!--MENU CLOSE-->
 

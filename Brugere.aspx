@@ -7,19 +7,6 @@
      <%--Current site--%>
 
       <h1>Brugere</h1>
-    <%-- Panel med heading --%>
-    <div class="row">
-        <div class="col-lg-6 col-md-6">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h1 class="panel-title">CodeBehind</h1>
-                </div>
-                <div class="panel-body">
-                    Hentet fra databasen ved hjælp af SQL kald i CodeBehind og DataBind til en Repeater
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 
@@ -43,10 +30,10 @@
     <asp:Repeater ID="Repeater_brugere" runat="server">
                     <ItemTemplate>
                         <tr>
-                            <td>    
+                            <td class="col-lg-2 col-md-3 col-sm-3 col-xs-2">    
                                 <a class="btn btn-success btn-xs" href="Bruger.aspx?ID=<%# Eval("Id") %>">Vis Detaljer</a>
                                 <a class="btn btn-warning btn-xs" href="Rediger.aspx?ID=<%# Eval("Id") %>">Ret</a>
-                                <a class="btn btn-danger btn-xs" href="Opret.aspx?ID=<%# Eval("Id") %>">Opret</a>
+                                <a class="btn btn-danger btn-xs" href="Slet.aspx?ID=<%# Eval("Id") %>">Slet</a>
                             </td>
                             <td>
                                 <%# Eval("Id") %>               

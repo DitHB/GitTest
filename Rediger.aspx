@@ -7,71 +7,55 @@
              <%--Current site--%>
 
       <h1>Rediger</h1>
-    <%-- Panel med heading --%>
-    <div class="row">
-        <div class="col-lg-6 col-md-6">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h1 class="panel-title">SQL Datasource</h1>
-                </div>
-                <div class="panel-body">
-                    Hentet fra databasen ved hjælp af SQLDataSource med selectparametersm, til at kunne requeste en querystring til en repeater.
-                </div>
+  <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-4">
+            <%-- Besked --%>
+            <%-- Div-boks med succes-meddelelse. Ikke synlig --%>
+            <asp:Panel ID="PanelMsgSuccess" runat="server" CssClass="alert alert-success alert-dismissable" Visible="False">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <strong>Ændringerne</strong> er blevet gemt
+            </asp:Panel>
+            <%-- Div-boks med fejlmeddelelse. Ikke synlig --%>
+            <asp:Panel ID="PanelMsgFejl" runat="server" CssClass="alert alert-danger alert-dismissable" Visible="False">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <strong>Ændringerne</strong> blev ikke gemt på grund af fejl.
+            </asp:Panel>
+
+            <%-- Inputfelter --%>
+            <div class="form-group">
+                <label>Navn</label>
+                <asp:TextBox ID="TextBoxNavn" runat="server" CssClass="form-control" Placeholder="Navn"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidatorNavn" runat="server" ErrorMessage="skal udfyldes" ValidationGroup="form" ControlToValidate="TextBoxNavn" Display="Dynamic"></asp:RequiredFieldValidator>
             </div>
+            <div class="form-group">
+                <label>Email</label>
+                <asp:TextBox ID="TextBoxEmail" runat="server" CssClass="form-control" Placeholder="Email"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidatorEmail" runat="server" ErrorMessage="skal udfyldes" ValidationGroup="form" ControlToValidate="TextBoxEmail" Display="Dynamic"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidatorEmail" runat="server" ErrorMessage="er ikke en email adresse" ValidationGroup="form" ValidationExpression="\b[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}\b" ControlToValidate="TextBoxEmail" Display="Dynamic"></asp:RegularExpressionValidator>
+            </div>
+            <div class="form-group">
+                <label>Telefon nummer</label>
+                <asp:TextBox ID="TextBoxTelefon" runat="server" CssClass="form-control" Placeholder="Telefon nummer"></asp:TextBox>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidatorTelefon" runat="server" ErrorMessage="er ikke et telefonnummer" ValidationGroup="form" ValidationExpression="\d{8}" ControlToValidate="TextBoxTelefon" Display="Dynamic"></asp:RegularExpressionValidator>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <asp:TextBox ID="TextBoxPassword" runat="server" CssClass="form-control" Placeholder="Password"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidatorPassword" runat="server" ErrorMessage="skal udfyldes" ValidationGroup="form" ControlToValidate="TextBoxPassword" Display="Dynamic"></asp:RequiredFieldValidator>
+            </div>
+            <div class="form-group">
+                <label>Bruger billede</label>
+                <div class="row row_med_billede_i_rediger_bruger_form">
+                    <asp:Image ID="ImageAvater" runat="server" CssClass="col-xs-6 col-sm-4 col-md-3 col-lg-3"/>
+                    <asp:Label ID="LabelAvatar" runat="server" Text="" CssClass="col-sx-6 col-sm-8 col-md-9 col-lg-9"></asp:Label>
+                </div>
+                <asp:FileUpload ID="FileUploadAvatar" runat="server" />
+            </div>
+            <asp:Button ID="ButtonRedigerBruger" runat="server" Text="Gem ændringer" CssClass="btn btn-success" OnClick="Button_RedigerBruger_Click" ValidationGroup="form" />
+            <a href="Brugere.aspx" class="btn btn-default">Annuller</a>
         </div>
     </div>
-
-   <!--************************************DATAUDTRÆK**************************************-->
-
-    <table border="1" class="table table-striped">
-        <thead>
-                <th class="label-primary">Go</th>
-
-
-            <%--    <th>Navn</th>
-                <th>Email</th>
-                <th>Telefon</th>
-                <th>Password</th>   col-md-offset-2"  --%>
-        </thead>
-        <tbody>
-                <a href="Brugere.aspx" class="info-back">Tilbage til Brugere</a>
-
-                    <tr>
-                        <td>
-                            <asp:Label ID="Label_ID" runat="server"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:TextBox ID="TextBox_Navn" runat="server"></asp:TextBox></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:TextBox ID="TextBox_Email" runat="server" CssClass="txt_fat" TextMode="MultiLine" MaxLength="250"></asp:TextBox></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:TextBox ID="TextBox_Telefon" runat="server" CssClass="txt_fat" TextMode="MultiLine"></asp:TextBox></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:TextBox ID="TextBox_Password" runat="server"></asp:TextBox></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:FileUpload ID="FileUpload_Img" runat="server" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:Button ID="Button_Save" runat="server" OnClick="Button_Save_Click" Text="Save" />
-                            <asp:Button ID="Button_Delete" runat="server" Text="Delete" OnClick="Button_Delete_Click" />
-                        </td>
-                    </tr>
-            </tbody>
-        </table>
-    <!--Dataudtræk CLOSE-->
-
+  
 
 
 

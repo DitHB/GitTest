@@ -6,20 +6,6 @@
          <%--Current site--%>
 
       <h1>Bruger</h1>
-    <%-- Panel med heading --%>
-    <div class="row">
-        <div class="col-lg-6 col-md-6">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h1 class="panel-title">SQL Datasource</h1>
-                </div>
-                <div class="panel-body">
-                    Hentet fra databasen ved hjælp af SQLDataSource med selectparametrer til at kunne requeste en querystring til en repeater.
-                </div>
-            </div>
-        </div>
-    </div>
-
 
      <asp:SqlDataSource ID="SqlDataSourceBrugerByID"
         runat="server"
@@ -30,50 +16,32 @@
         </SelectParameters>
     </asp:SqlDataSource>
 
-    <table border="1" class="table table-striped">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Navn</th>
-                <th>Email</th>
-                <th>Telefon</th>
-                <th>Password</th>
-               
-            </tr>
-        </thead>
-        <tbody>
-            <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSourceBrugerByID">
-                <ItemTemplate>
-                <tr>
-                 
-                        <a href="Brugere.aspx" class="btn btn-primary">Tilbage til Brugere</a>
-                 
-                        <img src="" width="200" height="200" />
-                   
-                 
-                    <td>
-                       <p> <%# Eval("Id") %>  </p>                
-                    </td>
-                    <td class=".">
-                        <p><%# Eval("Navn") %></p>
-                    </td>
+    <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSourceBrugerByID">
+        <ItemTemplate>
+            <div class="row">
+                <%-- Billede --%>
+                <img src="Images/Upload/Resized_Original/<%# Eval("Avatar") %>" class="col-lg-3 col-md-3 col-sm-4 col-xs-2" />
+                <%-- Data --%>
+                <div class="col-lg-6 col-md-4 col-sm-4">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item active">
+                            <h4 class="list-group-item-heading"><%# Eval("Navn") %></h4>
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <h4 class="list-group-item-heading">Email</h4>
+                            <p class="list-group-item-text"><%# Eval("Email") %></p>
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <h4 class="list-group-item-heading">Telefon</h4>
+                            <p class="list-group-item-text"><%# Eval("Telefon") %></p>
+                        </a>
+                    </div>
+                    <a href="Brugere.aspx" class="btn btn-default">Tilbage</a>
+                </div>
+            </div>
+        </ItemTemplate>
+    </asp:Repeater>
 
-                    <td>
-                        <p><%# Eval("Email") %></p>
-                    </td>
-
-                    <td>
-                        <p><%# Eval("Telefon") %></p>
-                    </td>
-
-                    <td>
-                        <p><%# Eval("Password") %></p>
-                    </td>
-                </tr>
-                </ItemTemplate>
-            </asp:Repeater>
-        </tbody>
-    </table>
 
 </asp:Content>
 
